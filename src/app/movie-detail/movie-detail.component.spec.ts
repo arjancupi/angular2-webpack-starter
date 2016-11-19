@@ -12,8 +12,8 @@ import { MockBackend } from '@angular/http/testing';
 
 // Load the implementations that should be tested
 import { AppState } from '../app.service';
-import { HomeComponent } from './home.component';
-import { Title } from './title';
+import { MovieDetailComponent } from './movie-detail.component';
+import { Title } from '../home/title';
 import { MovieService } from '../services/movie.service';
 
 describe('Home', () => {
@@ -31,20 +31,19 @@ describe('Home', () => {
       },
       AppState,
       Title,
-      HomeComponent,
-      MovieService
+      MovieDetailComponent
     ]
   }));
 
-  it('should have a title', inject([HomeComponent], (home: HomeComponent) => {
-    expect(!!home.title).toEqual(true);
+  it('should have a title', inject([MovieDetailComponent], (movieDetail: MovieDetailComponent) => {
+    expect(!!movieDetail.title).toEqual(true);
   }));
 
-  it('should log ngOnInit', inject([HomeComponent], (home: HomeComponent) => {
+  it('should log ngOnInit', inject([MovieDetailComponent], (movieDetail: MovieDetailComponent) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 
-    home.ngOnInit();
+    movieDetail.ngOnInit();
     expect(console.log).toHaveBeenCalled();
   }));
 });

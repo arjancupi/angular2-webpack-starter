@@ -1,0 +1,28 @@
+.movie-image-bg {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 639px;
+    background-repeat: no-repeat; 
+    background-position : center;
+    background-attachment: scroll;
+}
+
+.movie-title {
+    margin: 30px 0;
+    font-size: 4em;
+}
+
+.movie-title:first-letter {
+    text-transform: uppercase;
+}
+
+.movie-type:first-letter {
+    text-transform: uppercase;
+}
+
+.movie-synopsis {
+    margin: 30px 0;
+}

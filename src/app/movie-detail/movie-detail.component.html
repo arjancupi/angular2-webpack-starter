@@ -1,0 +1,9 @@
+<aside *ngIf="movie" class="movie-image-bg" [ngStyle]="{'background-image': 'url('+ movie.image +')'}" ></aside>
+
+<div class="row" *ngIf="movie">
+    <div class="col-md-12 padding-0">
+        <h2 class="movie-title">{{movie.title}} <small>{{movie.type}}</small></h2>
+        <p class="movie-release">Sorti le <b>{{movie.release}}</b></p>
+        <p class="movie-synopsis">{{movie.synopsis}}</p>
+    </div>
+</div>
